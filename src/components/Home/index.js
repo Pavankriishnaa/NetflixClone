@@ -44,7 +44,7 @@ class Home extends Component {
       if (response.ok) {
         const updatedData = data.results.map(each => ({
           id: each.id,
-          name: each.title,
+          title: each.title,
           posterPath: each.poster_path,
         }))
         this.setState({
@@ -74,10 +74,9 @@ class Home extends Component {
       if (response.ok) {
         const updatedData = data.results.map(each => ({
           id: each.id,
-          name: each.title,
+          title: each.title,
           posterPath: each.poster_path,
           backdropPath: each.backdrop_path,
-          title: each.title,
           overview: each.overview,
         }))
         const randomIndex = Math.floor(Math.random() * updatedData.length)
@@ -95,7 +94,7 @@ class Home extends Component {
   }
 
   renderLoader = () => (
-    <div className="loader-container" data-testid="loader">
+    <div className="loader-container" testid="loader">
       <div className="loader" />
     </div>
   )
@@ -126,7 +125,7 @@ class Home extends Component {
       <Slider {...settings}>
         {list.map(each => (
           <Link to={`/movies/${each.id}`} key={each.id}>
-            <img src={each.posterPath} alt={each.name} className="movie-img" />
+            <img src={each.posterPath} alt={each.title} className="movie-img" />
           </Link>
         ))}
       </Slider>
@@ -192,7 +191,7 @@ class Home extends Component {
       <>
         <Header />
         {isLoading ? (
-          <div className="loader-container" data-testid="loader">
+          <div className="loader-container" testid="loader">
             <div className="loader" />
           </div>
         ) : (
