@@ -94,7 +94,7 @@ class Home extends Component {
   }
 
   renderLoader = () => (
-    <div className="loader-container" testid="loader">
+    <div className="loader-container" data-testid="loader">
       <div className="loader" />
     </div>
   )
@@ -191,7 +191,7 @@ class Home extends Component {
       <>
         <Header />
         {isLoading ? (
-          <div className="loader-container" testid="loader">
+          <div className="loader-container" data-testid="loader">
             <div className="loader" />
           </div>
         ) : (

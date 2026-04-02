@@ -69,7 +69,7 @@ class Search extends Component {
   }
 
   renderLoader = () => (
-    <div className="loader-container" testid="loader">
+    <div className="loader-container" data-testid="loader">
       <div className="loader" />
     </div>
   )
@@ -156,7 +156,7 @@ class Search extends Component {
             />
             <button
               type="button"
-              testid="searchButton"
+              data-testid="searchButton"
               className="search-btn"
               onClick={this.onClickSearch}
             >

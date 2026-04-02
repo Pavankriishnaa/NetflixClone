@@ -28,7 +28,11 @@ class Header extends Component {
         </ul>
         <div className="nav-right">
           <Link to="/search">
-            <button type="button" className="button-hide" testid="searchButton">
+            <button
+              type="button"
+              className="button-hide"
+              data-testid="searchButton"
+            >
               <HiOutlineSearch size={25} />
             </button>
           </Link>
