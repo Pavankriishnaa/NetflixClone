@@ -11,7 +11,6 @@ import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
       <Switch>
         <ProtectedRoute exact path="/login" component={Login} />
         <ProtectedRoute exact path="/" component={Home} />
@@ -21,7 +20,6 @@ function App() {
         <ProtectedRoute exact path="/movies/:id" component={MovieItemDetails} />
         <Route component={NotFound} />
       </Switch>
-    </BrowserRouter>
   )
 }
 
